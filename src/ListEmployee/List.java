@@ -1,26 +1,26 @@
-package ListaTest;
+package ListEmployee;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-import ListaTest.Employee;
-public class Lista {
+public class List {
     public static void main(String[] args) {
 
-        List<Employee> lista = new ArrayList<>();
+        java.util.List<Employee> lista = new ArrayList<>();
         Scanner reader = new Scanner(System.in);
         System.out.print("How many employees will be registered? ");
         int numbers = reader.nextInt();
-        for(int i = 0; i < numbers; i++){
-            System.out.println("NAME: ");
-            String name = reader.next();
-            System.out.println("ID: ");
+        for(int i = 1; i <= numbers; i++){
+            System.out.println("Id: ");
             Integer id = reader.nextInt();
-            System.out.println("SAlARY: ");
+            System.out.println("Employoee #"+i+":");
+            System.out.println("Name: ");
+            String name = reader.next();
+            System.out.println("Salary: ");
             Float salary = reader.nextFloat();
             Employee employee = new Employee(id, name, salary);
             lista.add(employee);
+            System.out.println(" ");
         }
         System.out.println("Enter the employee id that will have salary increase: ");
         int id = reader.nextInt();
@@ -32,7 +32,7 @@ public class Lista {
                 valor.readJustment(porcentage);
             }
         }
-
+        System.out.println("List of employees");
         for (Employee valor: lista){
             System.out.println(valor.show());
         }
