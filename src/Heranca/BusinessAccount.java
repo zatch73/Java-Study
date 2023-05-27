@@ -10,5 +10,6 @@ public class BusinessAccount extends Account{
 
     public void loan(Double value){
         this.loanLimit -= value;
+        System.out.println("LOAN");
     }
 }
