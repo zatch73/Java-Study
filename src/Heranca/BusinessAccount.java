@@ -12,4 +12,11 @@ public class BusinessAccount extends Account{
         this.loanLimit -= value;
         System.out.println("LOAN");
     }
+
+    @Override
+    public void withdraw(Double value){
+        super.withdraw(value);
+        this.balance -= 5;
+        System.out.println(this.balance);
+    }
 }
