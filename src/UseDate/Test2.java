@@ -12,7 +12,7 @@ public class Test2 {
 
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        System.out.println("d1, usando o método do objeto: "+data1.format(formato));
+        System.out.println("d1, usando o (number, formatter);método do objeto: "+data1.format(formato));
         System.out.println("d1, passando o objeto para formato: "+formato.format(data1));
         System.out.println("d3, passando o objeto para formato: "+formato.format(data3));
 
